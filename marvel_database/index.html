@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: white;
+        }
+
+        header {
+            background: #e3e3e3;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #181818;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            padding: 15px 30px;
+            margin: 0 15px;
+            background-color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #d32f2f;
+        }
+
+        .intro {
+            text-align: center;
+            margin: 50px 0;
+            padding: 30px;
+            background: #181818;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cta-buttons a {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #e53935;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #181818;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Marvel Database
+    </header>
+
+    <nav>
+        <a href="browse_database.html">Browse Database</a>
+        <a href="add_hero.html">Add Hero</a>
+        <a href="add_villain.html">Add Villain</a>
+        <a href="add_movie.html">Add Movie</a>
+    </nav>
+
+    <div class="intro">
+        <h2>Welcome to the Marvel Database</h2>
+        <p>Your ultimate resource for everything Marvel! Explore the extensive collection of Marvel Heroes, Villains, and Movies.</p>
+        <p>Whether you're a Marvel enthusiast or new to the universe, you're in the right place to learn about and contribute to the legendary Marvel world.</p>
+
+        <div class="cta-buttons">
+            <a href="browse_database.html">Explore the Heroes, Villains, and Movies</a>
+            <a href="add_hero.html">Add a New Hero</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Marvel Database. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
