@@ -13,7 +13,7 @@
             padding: 0;
         }
         header {
-            background-color: #e3e3e3;
+            background-color: #569ba2;
             color: #333;
             padding: 20px;
             text-align: center;
@@ -44,18 +44,33 @@
             margin: 50px auto;
             width: 50%;
             background-color: #222;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
-        .form-container input, .form-container button {
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .form-container input,
+        .form-container button {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .form-container input {
+            background-color: #333;
+            color: white;
         }
         .form-container button {
             background-color: #d32f2f;
             color: white;
-            border: none;
             cursor: pointer;
         }
         .form-container button:hover {
@@ -84,10 +99,18 @@
     <div class="form-container">
         <h2>Add a Movie</h2>
         <form action="#" method="POST">
+            <label for="movie_title">Movie Title</label>
             <input type="text" id="movie_title" name="movie_title" placeholder="Movie Title" required>
+
+            <label for="release_year">Release Year</label>
             <input type="number" id="release_year" name="release_year" placeholder="Release Year" required>
+
+            <label for="studio">Studio</label>
             <input type="text" id="studio" name="studio" placeholder="Studio" required>
+
+            <label for="box_office">Box Office</label>
             <input type="text" id="box_office" name="box_office" placeholder="Box Office" required>
+
             <button type="submit">Add Movie</button>
         </form>
     </div>

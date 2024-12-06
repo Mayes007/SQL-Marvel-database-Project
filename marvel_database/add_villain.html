@@ -47,10 +47,27 @@
             padding: 20px;
             border-radius: 10px;
         }
-        .form-container input, .form-container button {
-            width: 100%;
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input, .form-container button, .form-container select {
             padding: 10px;
-            margin: 10px 0;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+            font-size: 1rem;
+        }
+        .form-container input::placeholder, 
+        .form-container select::placeholder {
+            color: #aaa;
         }
         .form-container button {
             background-color: #d32f2f;
@@ -84,10 +101,36 @@
     <div class="form-container">
         <h2>Add a Villain</h2>
         <form action="#" method="POST">
+            <label for="villain_name">Villain Name</label>
             <input type="text" id="villain_name" name="villain_name" placeholder="Villain Name" required>
+
+            <label for="villain_real_name">Real Name</label>
             <input type="text" id="villain_real_name" name="villain_real_name" placeholder="Real Name" required>
+
+            <label for="villain_nationality">Nationality</label>
             <input type="text" id="villain_nationality" name="villain_nationality" placeholder="Nationality" required>
+
+            <label for="villain_first_appearance">First Appearance Year</label>
             <input type="number" id="villain_first_appearance" name="villain_first_appearance" placeholder="First Appearance Year" required>
+
+            <label for="artifact">Artifact</label>
+            <input type="text" id="artifact" name="artifact" placeholder="Artifact (if any)">
+
+            <label for="powers_name">Power Name</label>
+            <input type="text" id="powers_name" name="powers_name" placeholder="Power Name" required>
+
+            <label for="powers_level">Power Level</label>
+            <select id="powers_level" name="powers_level" required>
+                <option value="">Select Power Level</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Extreme">Extreme</option>
+            </select>
+
+            <label for="hero_fighting">Hero Fighting</label>
+            <input type="text" id="hero_fighting" name="hero_fighting" placeholder="Hero Fighting" required>
+
             <button type="submit">Add Villain</button>
         </form>
     </div>

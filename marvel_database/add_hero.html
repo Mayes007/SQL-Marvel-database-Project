@@ -13,8 +13,8 @@
             padding: 0;
         }
         header {
-            background-color: #e3e3e3;
-            color: #333;
+            background-color: #569ba2;
+            color: #050505;
             padding: 20px;
             text-align: center;
             font-size: 2rem;
@@ -44,15 +44,30 @@
             margin: 50px auto;
             width: 50%;
             background-color: #222;
-            padding: 30px;
+            padding: 20px;
             border-radius: 10px;
-            
-            
         }
-        .form-container input, .form-container button {
-            width: 100%;
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input, .form-container button, .form-container select {
             padding: 10px;
-            margin: 10px 0;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: white;
+            font-size: 1rem;
+        }
+        .form-container input::placeholder, 
+        .form-container select::placeholder {
+            color: #aaa;
         }
         .form-container button {
             background-color: #d32f2f;
@@ -67,7 +82,7 @@
             text-align: center;
             background-color: #181818;
             color: white;
-            padding: 30px;
+            padding: 20px;
             margin-top: 40px;
         }
     </style>
@@ -86,10 +101,36 @@
     <div class="form-container">
         <h2>Add a Hero</h2>
         <form action="#" method="POST">
+            <label for="hero_name">Hero Name</label>
             <input type="text" id="hero_name" name="hero_name" placeholder="Hero Name" required>
+
+            <label for="hero_real_name">Real Name</label>
             <input type="text" id="hero_real_name" name="hero_real_name" placeholder="Real Name" required>
+
+            <label for="hero_nationality">Nationality</label>
             <input type="text" id="hero_nationality" name="hero_nationality" placeholder="Nationality" required>
+
+            <label for="hero_first_appearance">First Appearance Year</label>
             <input type="number" id="hero_first_appearance" name="hero_first_appearance" placeholder="First Appearance Year" required>
+
+            <label for="artifact">Artifact</label>
+            <input type="text" id="artifact" name="artifact" placeholder="Artifact (if any)">
+
+            <label for="powers_name">Power Name</label>
+            <input type="text" id="powers_name" name="powers_name" placeholder="Power Name" required>
+
+            <label for="powers_level">Power Level</label>
+            <select id="powers_level" name="powers_level" required>
+                <option value="">Select Power Level</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Extreme">Extreme</option>
+            </select>
+
+            <label for="villain_fighting">Villain Fighting</label>
+            <input type="text" id="villain_fighting" name="villain_fighting" placeholder="Villain Fighting" required>
+
             <button type="submit">Add Hero</button>
         </form>
     </div>
