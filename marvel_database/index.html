@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvel Database Home</title>
     <style>
-        body {
+        /* Apply a flexbox layout to the entire body to make footer stay at the bottom */
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(to bottom, #1c1c1c, #333333);
             color: white;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -26,6 +29,7 @@
 
         nav {
             margin: 20px 0;
+            text-align: center;
         }
 
         nav a {
@@ -61,11 +65,67 @@
             margin: 0;
         }
 
+        /* Footer styles */
         footer {
             background-color: #181818;
             color: white;
             padding: 20px;
-            margin-top: 100px;
+            margin-top: auto; /* Push footer to the bottom */
+            text-align: center;
+        }
+
+        /* Media queries for small screens */
+        @media (max-width: 768px) {
+            header {
+                font-size: 2.5rem;
+                padding: 15px;
+            }
+
+            nav a {
+                padding: 15px 20px;
+                font-size: 1rem;
+            }
+
+            .hero-section h1 {
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            .hero-section {
+                height: 300px;
+            }
+
+            footer {
+                font-size: 0.9rem;
+                padding: 15px;
+            }
+        }
+
+        /* Media queries for very small screens */
+        @media (max-width: 480px) {
+            header {
+                font-size: 2rem;
+                padding: 10px;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+
+            .hero-section {
+                height: 250px;
+            }
+
+            footer {
+                font-size: 0.8rem;
+                padding: 10px;
+            }
         }
     </style>
 </head>
